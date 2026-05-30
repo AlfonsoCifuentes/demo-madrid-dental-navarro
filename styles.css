@@ -1,0 +1,173 @@
+/* =========================================================
+   NAVARRO DENTAL — Burgundy/wine palette · Sora + Source Sans 3
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #7B2042;
+  --primary-dark: #5E1632;
+  --primary-xdark: #3D0D21;
+  --accent: #F9EEF2;
+  --bg: #FDF8FA;
+  --text: #241018;
+  --text-muted: #6B4055;
+  --white: #FFFFFF;
+  --border: #DDBED0;
+  --gold: #C9973A;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: var(--text); background: var(--white); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--primary-xdark); padding: 0 2rem; height: 70px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--white); letter-spacing: -0.5px; }
+.nav-logo span { color: rgba(249,238,242,0.75); font-weight: 400; font-size: 0.85rem; display: block; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-top: -4px; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-tel { color: rgba(255,255,255,0.85); font-family: 'Sora', sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: color 0.2s; }
+.nav-tel:hover { color: var(--white); }
+.nav-cta {
+  background: var(--gold); color: var(--white); padding: 0.6rem 1.4rem;
+  border-radius: 6px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.9rem;
+  text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 10px rgba(201,151,58,0.4);
+}
+.nav-cta:hover { background: #B5872E; transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  min-height: 100vh; padding-top: 70px;
+  background: linear-gradient(135deg, var(--primary-xdark) 0%, var(--primary) 100%);
+  position: relative; overflow: hidden; display: flex; align-items: center;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1598256989635-5e829ce7dac4?w=1600&q=80') center/cover no-repeat;
+  opacity: 0.12;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9); padding: 0.5rem 1.2rem; border-radius: 50px;
+  font-family: 'Sora', sans-serif; font-size: 0.82rem; font-weight: 500; margin-bottom: 2rem;
+}
+.badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+.hero-inner h1 {
+  font-family: 'Sora', sans-serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800;
+  color: var(--white); line-height: 1.1; max-width: 700px; margin-bottom: 1.5rem;
+}
+.hero-inner h1 em { color: var(--gold); font-style: normal; display: block; }
+.hero-inner p { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.75; max-width: 560px; margin-bottom: 3rem; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
+.hero-btn-primary {
+  background: var(--gold); color: var(--white); padding: 1rem 2.4rem;
+  border-radius: 8px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem;
+  text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 20px rgba(201,151,58,0.4);
+}
+.hero-btn-primary:hover { background: #B5872E; transform: translateY(-2px); }
+.hero-btn-outline {
+  border: 2px solid rgba(255,255,255,0.4); color: var(--white); padding: 0.98rem 2rem;
+  border-radius: 8px; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1rem;
+  text-decoration: none; transition: all 0.2s;
+}
+.hero-btn-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+.hero-stats { display: flex; gap: 3rem; flex-wrap: wrap; }
+.hero-stat-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--white); line-height: 1; }
+.hero-stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem; }
+
+/* SECTION */
+section { padding: 5rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label { font-family: 'Sora', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 0.6rem; }
+.section-title { font-family: 'Sora', sans-serif; font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 700; color: var(--text); margin-bottom: 1rem; line-height: 1.2; }
+.section-sub { color: var(--text-muted); font-size: 1.05rem; max-width: 580px; line-height: 1.7; }
+
+/* SEDES */
+.sedes { background: var(--bg); }
+.sedes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+.sede-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 14px;
+  padding: 2rem; transition: all 0.25s; position: relative;
+}
+.sede-card:hover { box-shadow: 0 12px 35px rgba(123,32,66,0.12); border-color: var(--primary); transform: translateY(-3px); }
+.sede-num { position: absolute; top: 1.25rem; right: 1.5rem; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--primary); opacity: 0.08; }
+.sede-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--text); }
+.sede-addr { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.5; }
+.sede-tel { display: flex; align-items: center; gap: 0.5rem; font-family: 'Sora', sans-serif; font-weight: 600; color: var(--primary); text-decoration: none; font-size: 0.92rem; transition: opacity 0.2s; }
+.sede-tel:hover { opacity: 0.7; }
+
+/* SERVICES */
+.services { background: var(--white); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+.service-card {
+  border-radius: 14px; border: 1px solid var(--border); padding: 2rem 1.5rem;
+  background: var(--bg); transition: all 0.25s;
+}
+.service-card:hover { background: var(--white); box-shadow: 0 10px 30px rgba(123,32,66,0.12); border-color: var(--primary); transform: translateY(-3px); }
+.service-icon { width: 44px; height: 44px; color: var(--primary); margin-bottom: 1rem; }
+.service-card h3 { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; }
+.service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+/* ABOUT */
+.about { background: var(--accent); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-img img { width: 100%; height: 460px; object-fit: cover; border-radius: 16px; box-shadow: 0 16px 50px rgba(123,32,66,0.2); }
+.about .section-sub { margin-top: 1rem; }
+.cert-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.cert-badge {
+  background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 1rem;
+  font-family: 'Sora', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--text);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.cert-badge svg { color: var(--primary); }
+
+/* TESTIMONIOS */
+.testimonios { background: var(--white); }
+.testimonios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.testimonio-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; }
+.stars { color: #F59E0B; margin-bottom: 0.75rem; font-size: 0.95rem; }
+.testimonio-text { font-size: 1rem; line-height: 1.75; color: var(--text); margin-bottom: 1.25rem; }
+.testimonio-author { display: flex; align-items: center; gap: 0.75rem; }
+.author-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; color: white; font-size: 1rem; flex-shrink: 0; }
+.author-name { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.92rem; }
+.author-detail { font-size: 0.8rem; color: var(--text-muted); }
+
+/* CONTACT */
+.contact { background: linear-gradient(135deg, var(--primary-xdark) 0%, var(--primary) 100%); color: white; text-align: center; padding: 6rem 2rem; }
+.contact .section-label { color: rgba(255,255,255,0.6); }
+.contact .section-title { color: white; margin-bottom: 0.75rem; }
+.contact-sub { color: rgba(255,255,255,0.82); max-width: 500px; margin: 0 auto 3rem; font-size: 1.1rem; line-height: 1.7; }
+.contact-info { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.contact-item { display: flex; align-items: center; gap: 0.65rem; }
+.contact-item svg { color: rgba(255,255,255,0.7); }
+.contact-item a, .contact-item span { color: white; text-decoration: none; font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1rem; }
+.contact-item a:hover { opacity: 0.8; }
+.contact-cta {
+  display: inline-block; background: var(--gold); color: var(--white); padding: 1.1rem 3rem;
+  border-radius: 8px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem;
+  text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 20px rgba(201,151,58,0.4);
+}
+.contact-cta:hover { background: #B5872E; transform: translateY(-2px); }
+
+/* FOOTER */
+footer {
+  background: var(--primary-xdark);
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.82rem;
+}
+
+footer strong { color: rgba(255,255,255,0.85); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-img { display: none; }
+  .contact-info { flex-direction: column; gap: 1.25rem; }
+}
